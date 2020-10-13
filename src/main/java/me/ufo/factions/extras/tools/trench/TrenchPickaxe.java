@@ -75,6 +75,11 @@ public final class TrenchPickaxe {
 
     final Location neg = location.clone().subtract(nx, this.radius, nz);
     final Location pos = location.clone().add(px, this.radius, pz);
+
+    if (neg.getBlockY() <= 0) {
+      neg.setY(1.0D);
+    }
+
     final Cuboid cuboid = new Cuboid(neg, pos);
 
     for (final Block block : cuboid.getBreakableBlocks()) {
