@@ -1,0 +1,9 @@
+name: FactionsExtras
+version: ${project.version}
+main: me.ufo.factions.extras.Extras
+depend: [ Factions, Architect ]
+softdepend: [ ShopGUIPlus, Vault ]
+commands:
+  tools:
+  genbuckets:
+    aliases: [ gb, gen, genbucket ]

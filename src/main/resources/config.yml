@@ -1,0 +1,103 @@
+# Tools:
+# TRENCH_PICKAXE
+# TRAY_PICKAXE
+# SELL_WAND
+# HARVESTER_HOE (not implemented yet)
+
+tools:
+  enabled: true
+  TRAY_PICKAXE:
+    enabled: true
+    name: "&cTray Pickaxe"
+    lore:
+      - ""
+      - "&7Radius: &e13x13"
+    material: "DIAMOND_PICKAXE"
+    glow: true
+  TRENCH_PICKAXE:
+    enabled: true
+    name: "&cTrench Pickaxe"
+    lore:
+      - ""
+      - "&7Radius: &e7x7"
+    material: "DIAMOND_PICKAXE"
+    enchantments:
+      - "EFFICIENCY:5"
+  SELL_WAND:
+    enabled: true
+    name: "&cSell Wand"
+    lore:
+      - ""
+      - "&7Sell all the contents of a chest."
+    material: "WOOD_HOE"
+    glow: true
+
+genbuckets:
+  enabled: true
+  lang:
+    given-bucket: "&7You have been given a %bucket%&7."
+    not-enough-for-purchase: "&7You need &c$%difference% &7more to purchase a %bucket%&7."
+    not-enough-for-placement: "&7You need &c$%difference% &7more to place this %bucket%&7."
+  gui:
+    title: "&cGenbuckets"
+    size: 27
+    stained-glass: 7
+  types:
+    VERTICAL:
+      COBBLESTONE:
+        name: "&eVertical Cobblestone Genbucket"
+        lore:
+          - "&c$30 per use"
+        material: "LAVA_BUCKET"
+        gui-slot: 10
+        costOfPurchase: 20
+        costOfPlacement: 30
+      SAND:
+        name: "&eVertical Sand Genbucket"
+        lore:
+          - "&c$30 per use"
+        material: "LAVA_BUCKET"
+        gui-slot: 11
+        costOfPurchase: 20
+        costOfPlacement: 30
+      OBSIDIAN:
+        name: "&eVertical Obsidian Genbucket"
+        lore:
+          - "&c$100 per use"
+        material: "LAVA_BUCKET"
+        gui-slot: 12
+        costOfPurchase: 10
+        costOfPlacement: 100
+    HORIZONTAL:
+      NETHERRACK:
+        name: "&eHorizontal Netherrack Genbucket"
+        lore:
+          - "&c$30 per use"
+        material: "LAVA_BUCKET"
+        gui-slot: 14
+        costOfPurchase: 20
+        costOfPlacement: 30
+      COBBLESTONE:
+        name: "&eHorizontal Cobblestone Genbucket"
+        lore:
+          - "&c$30 per use"
+        material: "LAVA_BUCKET"
+        gui-slot: 15
+        costOfPurchase: 20
+        costOfPlacement: 30
+      OBSIDIAN:
+        name: "&eHorizontal Obsidian Genbucket"
+        lore:
+          - "&c$100 per use"
+        material: "LAVA_BUCKET"
+        gui-slot: 16
+        costOfPurchase: 10
+        costOfPlacement: 100
+    UNLIMITED_WATER_BUCKET:
+      name: "&eUnlimited Water Bucket"
+      lore:
+        - "&c$50 per use"
+      material: "WATER_BUCKET"
+      gui-slot: 13
+      costOfPurchase: 50
+      costOfPlacement: 50
