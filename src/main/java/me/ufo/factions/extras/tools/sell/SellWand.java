@@ -1,5 +1,6 @@
 package me.ufo.factions.extras.tools.sell;
 
+import me.ufo.architect.util.Style;
 import me.ufo.factions.extras.Extras;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
@@ -49,8 +50,8 @@ public final class SellWand {
     if (totalCost > 0.0) {
       this.plugin.getDepends().deposit(player, totalCost);
       player.sendMessage(
-        ChatColor.GREEN.toString() + "You sold the contents of this chest for $" + Extras.getDecimalFormat()
-          .format(totalCost) + "."
+        ChatColor.GREEN.toString() + "You sold the contents of this chest for $" +
+        Style.DF_2.format(totalCost) + "."
       );
     } else {
       player.sendMessage(

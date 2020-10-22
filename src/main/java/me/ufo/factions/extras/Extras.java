@@ -1,6 +1,5 @@
 package me.ufo.factions.extras;
 
-import java.text.DecimalFormat;
 import me.ufo.factions.extras.depends.Depends;
 import me.ufo.factions.extras.genbuckets.Genbuckets;
 import me.ufo.factions.extras.tools.Tools;
@@ -12,8 +11,6 @@ public final class Extras extends JavaPlugin {
 
   private boolean debug;
   private Depends depends;
-
-  private static final DecimalFormat df = new DecimalFormat("#.##");
 
   @Override
   public void onEnable() {
@@ -46,10 +43,6 @@ public final class Extras extends JavaPlugin {
 
   public Depends getDepends() {
     return depends;
-  }
-
-  public static DecimalFormat getDecimalFormat() {
-    return df;
   }
 
 }

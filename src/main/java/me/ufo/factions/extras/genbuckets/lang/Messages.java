@@ -23,7 +23,7 @@ public class Messages {
   public String notEnoughForPlacement(final double difference, final String bucketName) {
     String out = Style.replace(
       this.genbuckets.getMessages().NOT_ENOUGH_FOR_PLACEMENT, "%difference%",
-      Extras.getDecimalFormat().format(difference));
+      Style.DF_2.format(difference));
 
     out = Style.replace(out, "%bucket%", bucketName);
 
@@ -33,7 +33,7 @@ public class Messages {
   public String notEnoughForPurchase(final double difference, final String bucketName) {
     String out = Style.replace(
       this.genbuckets.getMessages().NOT_ENOUGH_FOR_PURCHASE, "%difference%",
-      Extras.getDecimalFormat().format(difference));
+      Style.DF_2.format(difference));
 
     out = Style.replace(out, "%bucket%", bucketName);
 
