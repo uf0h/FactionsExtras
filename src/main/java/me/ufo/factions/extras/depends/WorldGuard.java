@@ -6,15 +6,16 @@ import org.bukkit.Location;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 
-public class Worldguard {
+public class WorldGuard {
 
   private WorldGuardPlugin worldguard;
 
   private boolean enabled;
 
-  public Worldguard(final Extras plugin) {
+  public WorldGuard(final Extras plugin) {
     if (plugin.getServer().getPluginManager().getPlugin("WorldGuard") != null) {
       this.enabled = true;
+      this.worldguard = (WorldGuardPlugin) plugin.getServer().getPluginManager().getPlugin("WorldGuard");
     }
   }
 

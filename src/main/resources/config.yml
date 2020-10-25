@@ -32,6 +32,18 @@ tools:
     material: "WOOD_HOE"
     glow: true
 
+chunkbusters:
+  enabled: true
+  lang:
+    placed: "&eYou have 5 seconds before the chunkbuster begins."
+  item:
+    name: "&eChunkbuster"
+    lore:
+      - "Place to remove an entire chunk."
+      - ""
+      - "&e&l* &7Obtained From&8: &estore.viciouspvp.net"
+    material: "ENDER_PORTAL_FRAME"
+
 genbuckets:
   enabled: true
   lang:

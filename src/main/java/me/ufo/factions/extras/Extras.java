@@ -1,5 +1,6 @@
 package me.ufo.factions.extras;
 
+import me.ufo.factions.extras.chunkbusters.Chunkbusters;
 import me.ufo.factions.extras.depends.Depends;
 import me.ufo.factions.extras.genbuckets.Genbuckets;
 import me.ufo.factions.extras.tools.Tools;
@@ -26,6 +27,10 @@ public final class Extras extends JavaPlugin {
 
     if (this.getConfig().getBoolean("genbuckets.enabled")) {
       new Genbuckets(this);
+    }
+
+    if (this.getConfig().getBoolean("chunkbusters.enabled")) {
+      new Chunkbusters(this);
     }
   }
 
