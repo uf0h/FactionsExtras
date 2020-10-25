@@ -13,6 +13,8 @@ public final class Extras extends JavaPlugin {
   private boolean debug;
   private Depends depends;
 
+  private Genbuckets genbuckets;
+
   @Override
   public void onEnable() {
     plugin = this;
@@ -26,12 +28,17 @@ public final class Extras extends JavaPlugin {
     }
 
     if (this.getConfig().getBoolean("genbuckets.enabled")) {
-      new Genbuckets(this);
+      this.genbuckets = new Genbuckets(this);
     }
 
     if (this.getConfig().getBoolean("chunkbusters.enabled")) {
       new Chunkbusters(this);
     }
+  }
+
+  @Override
+  public void onDisable() {
+    this.genbuckets.onDisable();
   }
 
   public static Extras get() {
