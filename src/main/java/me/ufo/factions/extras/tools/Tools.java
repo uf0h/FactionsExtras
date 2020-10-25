@@ -27,9 +27,6 @@ public final class Tools implements Listener {
   public Tools(final Extras plugin) {
     this.plugin = plugin;
 
-    plugin.getServer().getPluginManager().registerEvents(this, plugin);
-    plugin.getCommand("tools").setExecutor(new ToolsCommand());
-
     final ConfigurationSection config = plugin.getConfig().getConfigurationSection("tools");
 
     for (final Tool tool : Tool.values) {
@@ -61,6 +58,9 @@ public final class Tools implements Listener {
           this.sellWand = new SellWand(plugin);
       }
     }
+
+    plugin.getServer().getPluginManager().registerEvents(this, plugin);
+    plugin.getCommand("tools").setExecutor(new ToolsCommand());
   }
 
   @EventHandler(priority = EventPriority.HIGH, ignoreCancelled = true)
